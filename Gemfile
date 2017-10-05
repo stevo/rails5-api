@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'jbuilder', '~> 2.5'
+gem 'flex'
+gem 'flex-rails'
+gem 'jsonapi-resources'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
-gem 'sqlite3'
+gem 'rest-client'
 
 group :development, :test do
   gem 'pry-rails'
@@ -18,8 +20,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'simplecov', require: false
-  gem 'vcr'
-  gem 'webmock'
 end
 
 group :development do

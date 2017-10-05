@@ -1,0 +1,40 @@
+# To make it easier to find descriptions and add exceptions
+AllCops:
+  DisplayCopNames: true
+
+# So when reading code we know that given line has continuation
+Layout/DotPosition:
+  EnforcedStyle: 'trailing'
+
+# We prefer everything to be self-explanatory
+Style/Documentation:
+  Enabled: false
+
+# We do not care
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# More readable
+Style/VariableNumber:
+  EnforcedStyle: 'snake_case'
+
+# Sometimes using explicit condition is more readable
+Style/GuardClause:
+  Enabled: false
+
+# To fit Github review window
+Metrics/LineLength:
+  Max: 100
+
+# Lets be reasonable about it
+Metrics/AbcSize:
+  Max: 17
+
+# Large blocks and modules are totally fine in rspec
+Metrics/ModuleLength:
+  Exclude:
+    - '**/*_spec.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
