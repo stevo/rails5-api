@@ -10,6 +10,8 @@ gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 group :development, :test do
   gem 'pry-rails'
 end
